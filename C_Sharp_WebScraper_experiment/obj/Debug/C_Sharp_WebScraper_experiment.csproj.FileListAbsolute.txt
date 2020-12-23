@@ -1,0 +1,10 @@
+C:\Users\Dominic\source\repos\C_Sharp_WebScraper_experiment\C_Sharp_WebScraper_experiment\bin\Debug\C_Sharp_WebScraper_experiment.exe.config
+C:\Users\Dominic\source\repos\C_Sharp_WebScraper_experiment\C_Sharp_WebScraper_experiment\bin\Debug\C_Sharp_WebScraper_experiment.exe
+C:\Users\Dominic\source\repos\C_Sharp_WebScraper_experiment\C_Sharp_WebScraper_experiment\bin\Debug\C_Sharp_WebScraper_experiment.pdb
+C:\Users\Dominic\source\repos\C_Sharp_WebScraper_experiment\C_Sharp_WebScraper_experiment\bin\Debug\WebDriver.dll
+C:\Users\Dominic\source\repos\C_Sharp_WebScraper_experiment\C_Sharp_WebScraper_experiment\bin\Debug\WebDriver.xml
+C:\Users\Dominic\source\repos\C_Sharp_WebScraper_experiment\C_Sharp_WebScraper_experiment\obj\Debug\C_Sharp_WebScraper_experiment.csprojAssemblyReference.cache
+C:\Users\Dominic\source\repos\C_Sharp_WebScraper_experiment\C_Sharp_WebScraper_experiment\obj\Debug\C_Sharp_WebScraper_experiment.csproj.CoreCompileInputs.cache
+C:\Users\Dominic\source\repos\C_Sharp_WebScraper_experiment\C_Sharp_WebScraper_experiment\obj\Debug\C_Sharp_WebScraper_experiment.csproj.CopyComplete
+C:\Users\Dominic\source\repos\C_Sharp_WebScraper_experiment\C_Sharp_WebScraper_experiment\obj\Debug\C_Sharp_WebScraper_experiment.exe
+C:\Users\Dominic\source\repos\C_Sharp_WebScraper_experiment\C_Sharp_WebScraper_experiment\obj\Debug\C_Sharp_WebScraper_experiment.pdb
