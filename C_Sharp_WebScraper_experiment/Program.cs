@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
 
 namespace C_Sharp_WebScraper_experiment
 {
@@ -13,34 +12,45 @@ namespace C_Sharp_WebScraper_experiment
     {
         static void Main(string[] args)
         {
-            //IWebDriver driver = new ChromeDriver();
-            //driver.Navigate().GoToUrl("http://www.google.com");
+            // Get and validate the budget from the user
+            int budget = 0;
 
-            ////driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(5);
-            ////TimeSpan timer = new TimeSpan(0, 0, 5); // hours, min, sec
-            ////WebDriverWait wait = new WebDriverWait(driver, timer);
+            do
+            {
+                Console.Write("Input budget: $");
+                string input = Console.ReadLine();
+
+                try
+                {
+                    budget = Int32.Parse(input);
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine("\nThe Input was incorrect. Please Retry!");
+                }
+            } while (budget <= 0);
 
 
-
-            ////var element = driver.FindElement(By.CssSelector(".nav__categories--browseProducts.js-trigger--browseProducts"));
-            ////element.Click();
-
-
-            ////var element = driver.FindElement(By.XPath("//*[@id=\"tsf\"]/div[2]/div[1]/div[1]/div/div[2]/div"));
-            ////element.SendKeys("hello world. this is ya boy");
-
-            //var element = driver.FindElement(By.XPath("//*[@id=\"gbqfbb\"]"));
-            ////element.Click();
-            ///
-
+            // Create driver and neavigate to the page
             IWebDriver driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("https://www.ultimateQa.com/simple-html-elements-for-automation/");
-
-            //IWebElement element = driver.FindElement(By.Id("idExample"));
-            IWebElement element = driver.FindElement(By.XPath("//*[@id=\"idExample\"]"));
-            element.Click();
+            driver.Navigate().GoToUrl("http://www.pcpartpicker.com");
 
 
+            // Naviaget to the "Browse Products" tab and click it
+            IWebElement element = driver.FindElement(By.XPath
+                ("/html/body/header/nav/div[1]/section[2]/div/ul/li[4]/a"));    // Nav to browse products tab
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver; 
+            js.ExecuteScript("arguments[0].click();", element);                 // JS click faster than .click() ??
+            // element.Click(); // opens browse products tab
+
+
+            // Go to the CPU section
+            element = driver.FindElement(By.XPath
+                ("//*[@id=\"navigation\"]/div[4]/div[2]/div/div/div[1]/ul/li[1]/a")); // Nav to CPU element
+            //js.ExecuteScript("arguments[0].click();", element);
+            element.Click(); // Goes to the list of CPU products
+
+            
         }
     }
 }
